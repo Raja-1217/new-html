@@ -1,0 +1,115 @@
+/* Overall Body Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Animated Cycle on the Left Side */
+body::before {
+    content: "";
+    background: url('cycle.gif') no-repeat center;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: cycleMove 6s linear infinite;
+}
+
+@keyframes cycleMove {
+    0% { left: -200px; }
+    100% { left: 100%; }
+}
+
+/* Vertical Nav Bar (centered vertically) */
+nav {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    background: #ff4e50;
+    background: linear-gradient(to bottom, #f9d423, #ff4e50);
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    box-shadow: 0 0 10px #040000;
+    z-index: 2;
+}
+
+/* Form Styling */
+form {
+    margin: auto;
+    background: rgba(0, 0, 0, 0.758);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #040800;
+    box-shadow: 0 0 20px #f9d423;
+    color: #d8d1d1;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Form Inputs */
+input, select, textarea {
+    width: 100%;
+    margin: 8px 0 16px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid #f9d423;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Placeholder Text */
+::placeholder {
+    color: #b58a8a;
+    opacity: 0.8;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    color: #ffe;
+}
+
+/* Checkbox & Radio */
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #ff4e50;
+    color: rgb(219, 214, 214);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f9d423;
+    color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #f9d423;
+}

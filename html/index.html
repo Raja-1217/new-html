@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <b>A Form</b>
+    </nav>
+
+        <form action="/submit.php">
+            <div>
+                <label for="gender-">gender-----</label>
+                <select id="gender"required>
+                    <option value=""disable selected>select gender</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+            </div>
+            <div>
+                <p>subscription plan-----</p>
+                <input id="basic"type="radio"name="subscription"value="basic">
+                <label for="basic">basic</label>
+                <input  id="premium"type="radio"name="subscription"value="premium">
+                <label for="premium">premium</label>
+            </div>
+            <div>
+                <input id="terms & conditions"type="checkbox"required>
+                <label for="terms & conditions">i agree to the terms & conditions</label>
+
+            </div>
+            
+            <div>
+                
+                <label for="comments">comments</label>
+                <textarea id ="comments"placeholder="enter your comments" rows="2"cols="19"></textarea>
+            </div>
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </body>
+</html>
